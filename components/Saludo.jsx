@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Saludo = () => {
-const [NombreP, setNombreP]= useState("");
+const [nombreP, setNombreP]= useState("");
 const [mostrarSaludo, setMostrarSaludo]= useState(false);
 
 const handleAceptar= ()=>{
