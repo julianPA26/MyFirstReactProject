@@ -1,5 +1,5 @@
 import React from 'react'
-import Saludo from '../components/Saludo'
+import Saludo from './components/Saludo'
 
 const App = () => {
   return (
