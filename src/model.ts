@@ -5,5 +5,5 @@ export type Sesion={
     iniciarSesion: () => void;
     cerrarSesion: () => void;
     cambiarContrasenia: () => void;
-    regsitro: () => void;
+    registro: () => void;
 };
