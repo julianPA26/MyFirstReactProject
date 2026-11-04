@@ -1,33 +1,31 @@
 import React from 'react'
-import {Navbar} from "../components/navbar/Navbar"
+import { Navbar } from "../components/navbar/Navbar"
 import { Sesion } from '../model'
 import { Outlet } from 'react-router-dom';
-import {Footer} from '../components/Footer/Footer';
+import { Footer } from '../components/Footer/Footer';
 
-export const PublicLayout = ({usuario, iniciarSesion, cerrarSesion, cambiarContrasenia, registro}: Sesion) => {
+export const PublicLayout = ({ usuario, iniciarSesion, cerrarSesion }: Sesion) => {
   return (
     <div className="sitio">
-      <Navbar usuario={usuario} cerrarSesion={cerrarSesion}/>
+      <Navbar usuario={usuario} cerrarSesion={cerrarSesion} />
       <main id="contenido" className="contenido">
         <p>
-          {usuario 
+          {usuario
             ? `Sesion activa: ${usuario.nombre}`
             : "Visitante sin sesion"
           }
         </p>
         {/* Renderiza la pagina segun indicacion de react-router-dom */}
-        <Outlet 
+        <Outlet
           context={
-            { 
-              usuario, 
-              iniciarSesion, 
-              cerrarSesion, 
-              cambiarContrasenia,
-              registro
+            {
+              usuario,
+              iniciarSesion,
+              cerrarSesion,
             } satisfies Sesion
-          }/>        
+          } />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
